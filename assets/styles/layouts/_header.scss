@@ -1,0 +1,218 @@
+$menu-color: #ddd;
+$menu-color-hover: #fff;
+
+.navbar-default{
+    height: 178px;
+    background-image: url("../images/GT-header.jpg");
+    background-repeat: repeat-x;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+    margin-bottom: 0;
+    margin-top: 20px;
+    border: 0 none;
+
+    .container{
+        height: 100%;
+        position: relative;
+    }
+
+    .navbar-brand{
+        padding: 0;
+        max-width: 100%;
+
+        img{
+            position: relative;
+            z-index: 1;
+            max-width: 100%;
+            margin-top: 20px;
+            @media (min-width: $screen-sm-min){
+                margin-left: -100px;
+                max-width: none;
+            }
+        }
+    }
+    
+    .estimate-image{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: -20px;
+        margin-right: 20px;
+        display: none;
+
+        @media (min-width: $screen-md-min){
+            display: block;
+        }
+    }
+    
+    .navbar-header{
+        max-height: 100%;
+        text-align: center;
+        height: 100%;
+
+        @media (min-width: $screen-sm-min){
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    
+    .navbar-collapse{
+        clear: both;
+        border: 0 none;
+    }
+
+    .navbar-nav {
+        @media (max-width: $screen-xs-max){
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        text-align: right;
+
+        @media (min-width: $screen-sm-min){
+           position: absolute;
+           right: 0;
+           bottom: 0;
+           margin-bottom: 20px;
+           padding: 0;
+           margin-left: 242px;
+        }
+
+        @media (min-width: $screen-md-min){
+            margin-right: 242px;
+        }
+        a {
+            transition: color 0.5s ease;
+            text-shadow: none;
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+
+            &:hover,
+            &:focus{
+                color: #fff;
+                -webkit-animation-name: pulse;
+                        animation-name: pulse;
+            }
+        }
+        >li {
+            @media (min-width: $screen-sm-min){
+                &+li:before{
+                    content: "| ";
+                    display: inline-block;
+                    font-size: .8em;
+                    vertical-align: middle;
+                    color: $menu-color-hover;
+                }
+                display: inline-block;
+                float: none;
+            }
+            >a {
+                color: $menu-color;
+                padding: 10px;
+                display: inline-block;
+            }
+        }
+        >.open >.dropdown-menu >.active >a, 
+        >.open >.dropdown-menu >.active >a:focus, 
+        >.open >.dropdown-menu >.active >a:hover, 
+        >.open >.dropdown-menu >li >a:focus, 
+        >.open >.dropdown-menu >li >a:hover{
+            color: $menu-color-hover;
+            background-color: transparent;
+        } 
+        >.open >a, 
+        >.open >a:focus,
+        >.open >a:hover, 
+        >.active >a, 
+        >.active >a:focus, 
+        >.active >a:hover, 
+        >li.active >a, 
+        >li >a:focus, 
+        >li >a:hover {
+            background-color: transparent;
+            color: $menu-color-hover;
+        }
+        .dropdown {
+            .dropdown-menu {
+                text-align: inherit;
+                min-width: 110px;
+                transition: all .2s ease;
+                border: 0 none;
+                border-radius: 0;
+                box-shadow: none;
+                background-color: rgba(0,0,0,0.8);
+
+                @media (min-width: $screen-sm-min){
+                    text-align: left;
+                }
+                >li {
+                    &.active a, 
+                    >a:hover, 
+                    >a:focus {
+                        color: $menu-color-hover;
+                        background-color: transparent;
+                    }
+                    >a {
+                        color: $menu-color;
+                        font-weight: inherit;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggle {
+        transition: all .2s ease;
+        border-color: #ccc;
+        margin-top: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 15px;
+        margin-right: 20px;
+        z-index: 1;
+        &:hover, 
+        &:focus {
+            background-color: transparent;
+            border-color: #fff;
+            .icon-bar {
+                background-color: #fff;
+            }
+        }
+        .icon-bar {
+            transition: all .2s ease;
+            background-color: #ccc;
+        }
+    }
+    .navbar-collapse,
+    .navbar-form {
+        border-color: #ccc;
+    }
+    .socials {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        margin: 10px 15px 20px 15px;
+        @media (min-width: $screen-xs-min){
+            top: auto;
+            bottom: 0;
+            right: 0;
+            left: auto;
+        }
+        @media (min-width: $screen-sm-min){
+            bottom: auto;
+            top: 0;
+        }
+        @media (min-width: $screen-md-min){
+            right: 222px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "./scripts/main.js"
+      ],
+      "vendor": [
+        "../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "./styles/main.scss"
+      ],
+      "vendor": [
+        "../bower_components/animate.css/animate.min.css"
+      ],
+      "main": true
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "modernizr.js": {
+      "bower": ["modernizr"]
+    }
+  },
+  "config": {
+    "devUrl": "http://gt.loc"
+  }
+}

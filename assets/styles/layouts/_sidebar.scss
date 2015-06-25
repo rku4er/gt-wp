@@ -1,0 +1,140 @@
+.sidebar,
+.wpb_widgetised_column{
+    .widget{
+        overflow: hidden;
+
+        & + .widget{
+            margin-top: 10px;
+        }
+
+        &[class*="-instagram-feed"]{
+            background-color: #828387;
+            padding: 15px 15px 100px;
+
+            a{
+                color: #29292B;
+            }
+
+            h3{
+                font-family: Oswald, sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+                color: #29292B;
+                text-transform: uppercase;
+
+                &:before{
+                    content: "";
+                    display: inline-block;
+                    font-family: FontAwesome;
+                    font-feature-settings: normal;
+                    font-kerning: auto;
+                    font-language-override: normal;
+                    font-size: inherit;
+                    font-size-adjust: none;
+                    font-stretch: normal;
+                    font-style: normal;
+                    font-synthesis: weight style;
+                    font-variant: normal;
+                    font-weight: normal;
+                    font-size: 2em;
+
+                    line-height: inherit;
+                    text-rendering: auto;
+                    color: #29292B;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        .services{
+            overflow: hidden;
+            padding: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 512px;
+
+            @media (min-width: $screen-md-min){
+                padding-top: 100px;
+            }
+            
+            h3{
+                font-family: Raleway, sans-serif;
+                font-size: 36px;
+                line-height: 53px;
+                font-weight: 200;
+                color: #fff;
+                text-transform: uppercase;
+                margin: 0 0 20px;
+
+                @media (min-width: $screen-md-min){
+                    font-size: 42px;
+                }
+            }
+
+            a.btn-custom{
+                background-color: #fff;
+                color: #89A615;
+                text-transform: uppercase;
+                text-align: center;
+                font-family: Oswald, sans-serif;
+                font-weight: 300;
+                font-size: 20px;
+                display: block;
+                border: 0 none;
+                padding: 15px;
+                position: relative;
+                z-index: 2;
+                box-shadow: 0 0 3px 3px rgba(0,0,0,0.3);
+
+                &:hover:after{
+                    opacity: .7;
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-image: url("../images/GT-button.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 100%;
+                    z-index: -2;
+                }
+                &:after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #000;
+                    opacity: 0.8;
+                    z-index: -1;
+                    transition: opacity .2s ease;
+                }
+            }
+        }
+
+        .socials{
+            display: block;
+            background-color: $brand-primary;
+            color: #fff;
+            padding: 18px;
+            height: 75px;
+            >span{
+                margin-right: 20px;
+            }
+        }
+    }
+}
+.sidebar{
+    @media (min-width: $screen-md-min){
+        padding-top: 100px;
+    }
+}

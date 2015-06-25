@@ -1,0 +1,92 @@
+$grid_space: 10px;
+
+.wpb_row, .wpb_content_element, ul.wpb_thumbnails-fluid > li, .last_toggle_el_margin, .wpb_button{
+    margin-bottom: $grid_space;
+}
+.vc_row{
+    margin-left: -$grid_space;
+    margin-right: -$grid_space;
+}
+.vc_col-xs-1, .vc_col-sm-1, .vc_col-md-1, .vc_col-lg-1, .vc_col-xs-2, .vc_col-sm-2, .vc_col-md-2, .vc_col-lg-2, .vc_col-xs-3, .vc_col-sm-3, .vc_col-md-3, .vc_col-lg-3, .vc_col-xs-4, .vc_col-sm-4, .vc_col-md-4, .vc_col-lg-4, .vc_col-xs-5, .vc_col-sm-5, .vc_col-md-5, .vc_col-lg-5, .vc_col-xs-6, .vc_col-sm-6, .vc_col-md-6, .vc_col-lg-6, .vc_col-xs-7, .vc_col-sm-7, .vc_col-md-7, .vc_col-lg-7, .vc_col-xs-8, .vc_col-sm-8, .vc_col-md-8, .vc_col-lg-8, .vc_col-xs-9, .vc_col-sm-9, .vc_col-md-9, .vc_col-lg-9, .vc_col-xs-10, .vc_col-sm-10, .vc_col-md-10, .vc_col-lg-10, .vc_col-xs-11, .vc_col-sm-11, .vc_col-md-11, .vc_col-lg-11, .vc_col-xs-12, .vc_col-sm-12, .vc_col-md-12, .vc_col-lg-12{
+    padding-left: $grid_space;
+    padding-right: $grid_space;
+}
+
+*::-moz-selection {
+    color: #fff;
+    background: $brand-primary;
+    text-shadow: none;
+}
+
+*::selection {
+    color: #fff;
+    background: $brand-primary;
+    text-shadow: none;
+}
+
+.row{
+    width: auto;    
+}
+
+html,
+body {
+    height: 100%;
+    background-image: url("../images/GT-background.jpg");
+    background-repeat: repeat;
+    background-position: 50% 50%;
+}
+
+.wrap {
+    position: relative;
+    background-color: #FFF;
+
+    @media (min-width: $screen-md-min){
+        min-height: 430px;
+    }
+    
+    &:before,
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        width: 32px;
+
+    }
+    &:before{
+        right: 100%;
+        background-image: url("../images/GT-content-bg-left.png");
+    }
+    &:after{
+        left: 100%;
+        background-image: url("../images/GT-content-bg-right.png");
+    }
+
+}
+body:not(.home) .wrap{
+    @media (min-width: $screen-sm-min){
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 150px;
+    }
+}
+
+.navbar-fixed-top + .wrap{
+    padding-top: 110px;
+}
+
+.main{
+    > .wpb_row{
+        &:last-child{
+            margin-bottom: 0;
+        }
+        >[class*="vc_col"]:nth-child(2){
+            @media (min-width: $screen-sm-min){
+                padding-left: 0;
+            }
+        }
+    }
+}
