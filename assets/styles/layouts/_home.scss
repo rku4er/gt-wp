@@ -9,13 +9,21 @@
     }
 
     .carousel-caption{
-        padding: 100px 20px 20px; 
+        padding: 20px; 
         position: absolute;
         bottom: 0;
         right: 0;
+        left: 0;
         overflow: hidden;
         z-index: 1;
         text-align: right;
+
+        @media (min-width: $screen-sm-min){
+            padding-top: 100px;
+        }
+        @media (min-width: $screen-md-min){
+            left: 20%;
+        }
 
         &:before{
             content: "";
@@ -24,12 +32,16 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            height: 300%;
+            height: 100%;
             background-color: $brand-primary;
             opacity: 0.8;
             z-index: -1;
-            transform-origin: 0 100%;
-            transform: rotate(62deg);
+
+            @media (min-width: $screen-sm-min){
+                height: 300%;
+                transform-origin: 0 100%;
+                transform: rotate(58deg);
+            }
 
             @media (min-width: $screen-md-min){
                 transform: rotate(56deg);
