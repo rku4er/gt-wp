@@ -104,9 +104,9 @@ function gallery($attr) {
 
     $output .= '<div class="thumb-wrapper">' . $image;
 
-    if (trim($attachment->post_title)) {
-      $output .= '<h2 class="thumb-title">' . wptexturize($attachment->post_title) . '</h2>';
-    }
+    //if (trim($attachment->post_title)) {
+      //$output .= '<h2 class="thumb-title">' . wptexturize($attachment->post_title) . '</h2>';
+    //}
     if (trim($attachment->post_excerpt)) {
       $output .= '<div class="caption">' . wptexturize($attachment->post_excerpt) . '</div>';
     }
@@ -122,6 +122,7 @@ function gallery($attr) {
 
   return $output;
 }
+
 if (current_theme_supports('bootstrap-gallery')) {
   remove_shortcode('gallery');
   add_shortcode('gallery', __NAMESPACE__ . '\\gallery');

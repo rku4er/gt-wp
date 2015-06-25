@@ -59,6 +59,11 @@
         $(window).load(function() {
             $('body').addClass('loaded');
         });
+
+
+        $('.gallery .caption').click(function(){
+            $(this).siblings('.thumbnail').trigger('click');
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired

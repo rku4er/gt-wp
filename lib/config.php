@@ -14,6 +14,7 @@ add_theme_support('soil-google-analytics'); // Enable Google Analytics
 //add_theme_support('soil-jquery-cdn');     // Enable jQuery from the Google CDN
 //add_theme_support('soil-js-to-footer');   // Enable js to footer
 //add_theme_support('soil-nav-walker');     // Enable clean nav walker
+add_theme_support('bootstrap-gallery');     // Enable Bootstrap Gallery
 
 /**
  * Configuration values
